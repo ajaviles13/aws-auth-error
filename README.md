@@ -28,6 +28,28 @@ app
 
 ```
 
-## 📝 Notes
+## Key Files
+-> lib/amplify.js: Contains AWS Amplify setup and functions.
+-> lib/useAmplify.js: Provides a callback for AWS Amplify operations.
+-> context/GlobalProvider.js: A global context provider for the app, meant to store and share AWS User information across screens.
+-> app/_index.jsx: The main app entry point where GlobalProvider is initialized.
 
-- [Expo Router: Docs](https://docs.expo.dev/router/introduction/)
+## 🚨 Current Issues
+# Sign In and Auto Sign In Bugs
+# Issue: 
+After signing up and confirming OTP, the AWS User information does not save in the GlobalProvider variables. This affects the Sign In and Auto Sign In functionality.
+Expected Behavior: AWS User information should be stored in GlobalProvider upon successful sign-up confirmation. This context provider wraps the app's navigation, making AWS User data accessible across all screens.
+Related Code:
+AWS Amplify functions: lib/amplify.js
+Callback handling: lib/useAmplify.js
+Global context: context/GlobalProvider.js
+To Reproduce the Issue
+Sign up for a new account.
+Confirm OTP as directed.
+Attempt to sign in.
+Observe the bug where AWS User information fails to load into GlobalProvider, resulting in limited access across screens.
+Usage Notes
+This README is intended to help collaborators understand the current state of the project and locate relevant files quickly for troubleshooting.
+
+
+
