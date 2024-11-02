@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-plungepalsmvp-staging-#####-authRole",
+      "UnauthRoleArn": "arn:aws:iam::############:role/amplify-plungepalsmvp-staging-#####-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::############:role/amplify-plungepalsmvp-staging-#####-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-plungepalsmvp-staging-#####-deployment",
+      "UnauthRoleName": "amplify-plungepalsmvp-staging-#####-unauthRole",
+      "StackName": "amplify-plungepalsmvp-staging-#####",
+      "StackId": "arn:aws:cloudformation:us-east-2:############:stack/amplify-plungepalsmvp-staging-#####/########-####-####-####-##########",
+      "AmplifyAppId": "############"
+    },
+    "categories": {
+      "auth": {
+        "PlungePalsMVP": {}
+      }
+    }
+  }
+}

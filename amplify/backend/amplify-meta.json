@@ -1,0 +1,58 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-plungepalsmvp-staging-5c6e6-authRole",
+      "UnauthRoleArn": "arn:aws:iam::535002896333:role/amplify-plungepalsmvp-staging-5c6e6-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::535002896333:role/amplify-plungepalsmvp-staging-5c6e6-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-plungepalsmvp-staging-5c6e6-deployment",
+      "UnauthRoleName": "amplify-plungepalsmvp-staging-5c6e6-unauthRole",
+      "StackName": "amplify-plungepalsmvp-staging-5c6e6",
+      "StackId": "arn:aws:cloudformation:us-east-2:535002896333:stack/amplify-plungepalsmvp-staging-5c6e6/b44c6b70-9254-11ef-a637-0a7f500acdf1",
+      "AmplifyAppId": "dy1s7wag66tvq"
+    }
+  },
+  "auth": {
+    "PlungePalsMVP": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 6,
+          "passwordPolicyCharacters": []
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "output": {
+        "UserPoolId": "us-east-2_SNL46wTwz",
+        "AppClientIDWeb": "4tmusppn7fnrbdfqsm47agg7n3",
+        "AppClientID": "2ind8i5k3f6aft8knqpn4bss4l",
+        "IdentityPoolId": "us-east-2:cec9e79f-5ffc-49e0-ba0e-f5b02ca8d17a",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-2:535002896333:userpool/us-east-2_SNL46wTwz",
+        "IdentityPoolName": "testAuthIdentityPool__staging",
+        "UserPoolName": "PlungePalsMVP"
+      },
+      "lastPushTimeStamp": "2024-10-27T02:05:37.948Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-plungepalsmvp-staging-5c6e6-deployment/amplify-cfn-templates/auth/PlungePalsMVP-cloudformation-template.json",
+        "logicalId": "authPlungePalsMVP"
+      },
+      "lastPushDirHash": "sE2nW4KDe44wqzmJrJIOLJ6jEIo="
+    }
+  }
+}
