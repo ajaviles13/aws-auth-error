@@ -1,4 +1,4 @@
-# Expo Router Example
+# React Native Expo Project with AWS Amplify Authentication Bug
 
 Use [`expo-router`](https://docs.expo.dev/router/introduction/) to build native navigation using files in the `app/` directory.
 
