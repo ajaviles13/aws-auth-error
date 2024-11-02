@@ -1,11 +1,31 @@
 # React Native Expo Project with AWS Amplify Authentication Bug
 
-Use [`expo-router`](https://docs.expo.dev/router/introduction/) to build native navigation using files in the `app/` directory.
+This is a React Native project using Expo and AWS Amplify for authentication. The app is built to provide basic Sign Up and Sign In functionality, with additional screens for app content. Currently, the Sign Up feature works as expected, but there are issues with the Sign In and Auto Sign In features.
 
-## 🚀 How to use
+Project Structure
+The project follows a structured folder organization for authentication and main app screens. AWS Amplify functions are stored separately in a lib folder.
+
+Folder Layout
+
+## 📁 Folder Layout
 
 ```sh
-npx create-expo-app -e with-router
+app
+├── _layout.jsx
+├── index.jsx
+├── (auth)
+│   ├── _layout.jsx
+│   ├── confirmCodeUponSignUp.jsx
+│   ├── forgotPassword.jsx
+│   ├── signIn.jsx
+│   └── signUp.jsx
+└── (tabs)
+    ├── _layout.jsx
+    ├── bookmark.jsx
+    ├── create.jsx
+    ├── home.jsx
+    └── profile.jsx
+
 ```
 
 ## 📝 Notes
