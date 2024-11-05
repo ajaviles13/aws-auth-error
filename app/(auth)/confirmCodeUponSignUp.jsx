@@ -5,8 +5,9 @@ import { images, icons } from '../../constants'
 import FormField from '../../components/FormField'
 import CustomButton from '../../components/CustomButton'
 import { router } from 'expo-router'
-import { aws_signUpConfirmation, aws_resendConfirmationCode } from '../../lib/amplify'
+import { aws_signUpConfirmation } from '../../lib/amplify'
 import { useGlobalContext } from "../../context/GlobalProvider";  
+import { resendSignUpCode } from 'aws-amplify/auth';
 
 const confirmCodeUponSignUp = () => {
 
@@ -31,7 +32,9 @@ const confirmCodeUponSignUp = () => {
       let newSetUser = deepMerge(user, signUpConfirmResult); // Update the global 'user' JSON based on confirmation code completed
       console.log("\n'newSetUser': ", newSetUser)
       setUser(newSetUser);
+
       setIsLoggedIn(true);
+      // Redirect to the home page
       router.replace("/home"); 
 
     } catch (error) {
@@ -55,7 +58,10 @@ const confirmCodeUponSignUp = () => {
   // Function for handling is the "Resend Code" is clicked
   const onResendCodePress = async () => {
     try{
-      await aws_resendConfirmationCode(globalEmail)
+      const resendCodeResult = await resendSignUpCode({
+        username: globalEmail
+      });
+      console.log('resendCodeResult: ', resendCodeResult);
     }catch(error){
       Alert.alert('Error', error.message);
     }
