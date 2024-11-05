@@ -6,12 +6,8 @@ import FormField from '../../components/FormField'
 import CustomButton from '../../components/CustomButton'
 import DropDownPicker from '../../components/DropDownPicker'
 import { Link, router } from 'expo-router'
-import { aws_signUp } from '../../lib/amplify'
+import { aws_signUp, handleSignUp } from '../../lib/amplify'
 import { useGlobalContext } from "../../context/GlobalProvider";
-
-import { Auth, API, Storage, Amplify } from 'aws-amplify';
-import config from '../../src/aws-exports'; // Ensure this path points to your aws-exports.js file
-Amplify.configure(config); // Correctly configure Amplify with the config file
 
 const SignUp = () => {
   
@@ -41,7 +37,8 @@ const SignUp = () => {
     try {
       
       // AWS Sign Up function requires a single object
-      const signUpResult = await aws_signUp(form); 
+      console.log('\nSubmitted Form: ', form);
+      const signUpResult = await handleSignUp(form); 
       setUser(signUpResult);
       setGlobalEmail(form.email.trim().toLowerCase())
       
